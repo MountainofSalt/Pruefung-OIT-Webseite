@@ -170,6 +170,12 @@ p {
 }
 
 /* Tabellenstil für Datawrapper-Kompatibilität */
+.datawrapper-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;

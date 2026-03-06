@@ -1,0 +1,210 @@
+/* style.css for 67 BalanceForce
+   ruhiges, meditatives, minimalistisches Design
+   sanfte Blau-, Grün- und Gelbtöne
+   zentrale Content-Spalte, viel Weißraum, modern
+*/
+
+:root {
+    /* Farbpalette */
+    --color-bg: #f9f9f7;
+    --color-primary: #6baac9;   /* sanftes blau */
+    --color-secondary: #8fbf9f; /* beruhigendes grün */
+    --color-accent: #f3e6b5;    /* zartes gelb */
+    --color-text: #333333;
+    --color-heading: #1a1a1a;
+    --color-link: var(--color-primary);
+    --color-link-hover: #4a8ab7;
+    --max-width: 800px;
+}
+
+/* Reset und Grundtypografie */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Layout und zentrale Spalte */
+main {
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 2rem 1rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+/* Kopfzeile und Navigation */
+header {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--color-accent);
+}
+
+/* Überschriften */
+h1, h2, h3, h4 {
+    color: var(--color-heading);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 0.25rem;
+    margin-top: 2rem;
+}
+
+/* Fließtext */
+p {
+    margin-bottom: 1rem;
+}
+
+/* Kontakt-Button */
+.button {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-text);
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #f0d77f;
+}
+
+/* Icons im Trainingsphilosophie-Bereich */
+.icons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.icon-item {
+    text-align: center;
+}
+
+.icon-placeholder {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 0.75rem;
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+}
+
+.icon-item p {
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+/* Responsive Bilder */
+.image-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.image-row figure {
+    flex: 1 1 200px;
+    margin: 0;
+    text-align: center;
+}
+
+.image-row img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.image-row figcaption {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.25rem;
+}
+
+/* Tabellenstil für Datawrapper-Kompatibilität */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--color-accent);
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #eee;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Responsives Verhalten */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
